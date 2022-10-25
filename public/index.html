@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/slimselect.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist" />
+  <link rel="icon" href="favicon.ico?v=1.1" />
+  <script src="js/slimselect.js"></script>
+
+  <title>Venice Shops</title>
+  <meta charset="utf-8" />
+  <script type="module" src="js/scripts.js" defer></script>
+  <script  type="module" src="js/ol.js"></script>
+</head>
+
+<body>
+  <div class="bar">
+    <div></div>
+    <h1>VENICE SHOPS</h1>
+    <div class="buttons">
+      <button type="button" class="outerIcon" id="gotoLocation">
+        <img class="icons" src="assets/gps.png" />
+      </button>
+      <button type="button" class="outerIcon" id="goHome">
+        <img class="icons" src="assets/home.png" />
+      </button>
+      <button type="button" class="outerIcon" id="addLocation">
+        <img class="icons" src="assets/plus.png" />
+      </button>
+      <button type="button" class="outerIcon" id="download">
+        <img class="icons" src="assets/download.png" />
+      </button>
+      <button type="button" class="outerIcon" id="settings">
+        <img class="icons" src="assets/settings.png" />
+      </button>
+    </div>
+  </div>
+
+  <div class="mainGrid">
+    <div id="map" class="map">
+      <button type="button" id="changeSize">
+        <img class="icons" id="changeSizeImg" src="assets/enlarge.png" />
+      </button>
+    </div>
+
+    <div id="filter">
+      <h1 id="top">Filters</h1>
+      <div class="checkboxGrid1">
+        <h3 class="checkboxLabel" id="shopsFilter">Shops</h3>
+        <h3 class="checkboxLabel" id="airbnbFilter">Airbnbs</h3>
+      </div>
+      <h2 class="filters" id="yearFilter">Year Collected</h2>
+      <h2 class="filters" id="sestiereFilter">Sestiere</h2>
+      <h2 class="filters" id="storeFilter">Shop Type</h2>
+      <div class='collected'>
+        <h2>Shops selected:</h2>
+        <h2 class="countDisplay" id="numberDisplay"></h2>
+      </div>
+      <div class='collected'>
+        <h2>Airbnbs selected:</h2>
+        <h2 class="countDisplay" id="airbnbNumberDisplay"></h2>
+      </div>
+      <div id="cycleButtons">
+        <button type="button" class="textButton" id="timelapseButton">Cycle Years</button>
+        <button type="button" class="textButton" id="stopTimelapseButton">Stop Cycling</button>
+      </div>
+      <h1 id=yearDisplay></h1>
+      <div class="checkboxGrid2">
+        <h3 class="checkboxLabel" id="flagFilter">Flagged</h3>
+        <h3 class="checkboxLabel" id="unflagFilter">Unflagged</h3>
+        <h3 class="checkboxLabel" id="openFilter">Open</h3>
+        <h3 class="checkboxLabel" id="touristFilter">Tourist</h3>
+        <h3 class="checkboxLabel" id="residentFilter">Resident</h3>
+        <h3 class="checkboxLabel" id="mixedFilter">Mixed</h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup" class="ol-popup">
+    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+    <div id="popup-content"></div>
+  </div>
+  <p id="abbrPopup"><p>
+</body>
+
+</html>
