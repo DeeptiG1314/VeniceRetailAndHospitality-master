@@ -2113,16 +2113,19 @@ function setStoreFilter() {
 
 //Sets up the Timelapse buttons
 function setTimelapse() {
+  //tartTimelapse()
   //Reference to the Start Cycle button
   const timelapseButton = document.querySelector('#timelapseButton')
   //Button press event listener, calls 'StartTimelapse'
-  timelapseButton.onclick = function () { startTimelapse }
+  //timelapseButton.onclick = startTimelapse()
+  timelapseButton.onclick = function () { startTimelapse() }
   timelapseButton.style.backgroundColor = "gainsboro"
 
   //Reference to the Stop Cycle button
   const stopTimelapseButton = document.querySelector('#stopTimelapseButton')
   //Button press event listener, calls 'StopTimelapse'
-  stopTimelapseButton.onclick = function () { stopTimelapse }
+  stopTimelapseButton.onclick = function () { stopTimelapse() }
+      //stopTimelapseButton.onclick = stopTimelapse()
   stopTimelapseButton.style.backgroundColor = "grey"
   //Disables the button by default
   stopTimelapseButton.disabled = true
@@ -2197,7 +2200,7 @@ function stopTimelapse() {
   //References the Start Cycle button and resets its label
   const timelapseButton = document.querySelector('#timelapseButton')
   timelapseButton.innerText = 'Cycle Years'
-  timelapseButton.onclick = startTimelapse
+  //timelapseButton.onclick = startTimelapse()
 
   //References and clears the year display
   const yearDisplay = document.querySelector('#yearDisplay')
