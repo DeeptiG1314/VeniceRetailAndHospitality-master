@@ -7,11 +7,11 @@
     "configurations": [
 
           {
-            "type": "pwa-chrome",
+            "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:5000",
-            "webRoot": "${workspaceFolder}\\public"
+            "url": "http://localhost:3001",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }

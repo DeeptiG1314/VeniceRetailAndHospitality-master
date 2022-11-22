@@ -2116,6 +2116,8 @@ function setStoreFilter() {
   });
 }
 
+
+
 //Sets up the Timelapse buttons
 function setTimelapse() {
   //Reference to the Start Cycle button

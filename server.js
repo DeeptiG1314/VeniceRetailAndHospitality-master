@@ -1,3 +1,5 @@
+//checking commit to repo -- kody
+
 //Establishes all dependencies
 const express = require("express"),
   app = express(),
@@ -9,7 +11,7 @@ const express = require("express"),
   {google} = require('googleapis'),
   KEYFILEPATH = __dirname + '/googleKey.json',
   SCOPES = ['https://www.googleapis.com/auth/drive'],
-  port = 5000;
+  port = 3001;
 
 //MongoDB setup
 //const uri = "mongodb+srv://mapuser:mapuser@cluster0.0k894.mongodb.net/"
