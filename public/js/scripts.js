@@ -524,6 +524,8 @@ function setContent(pointInfo) {
     const inputGrid = document.createElement("div")
     inputGrid.classList.add("inputGrid")
 
+    
+
     //Creates a label, input, and clear button for the name of the entry
     const nameLabel = document.createElement("label")
     nameLabel.setAttribute("for", "nameInput")
@@ -1208,7 +1210,10 @@ function setContent(pointInfo) {
   //Adds the grid to the popup
   content.appendChild(popupGrid)
 
-  
+  //starts application with disabled buttons on the popup
+  // editButton.disabled = true
+  // plusButton.disabled = true
+  // deleteButton.disabled = true
  
   //Creates a 'div' element to house all necessary displays
   const displayedInfo = document.createElement("div")

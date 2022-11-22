@@ -12,8 +12,10 @@ const express = require("express"),
   port = 5000;
 
 //MongoDB setup
-const uri = "mongodb+srv://mapuser:mapuser@cluster0.0k894.mongodb.net/"
+//const uri = "mongodb+srv://mapuser:mapuser@cluster0.0k894.mongodb.net/"
+const uri = "mongodb://localhost:27017/"
 const client = new mongodb.MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+//const client = new mongodb.MongoClient("mongodb://localhost:27017/")
 let shopCollection = null
 let airbnbCollection = null
 let typesCollection = null
