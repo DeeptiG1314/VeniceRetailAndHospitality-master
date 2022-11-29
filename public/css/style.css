@@ -76,6 +76,11 @@
     margin-right: 7px;
 }
 
+#infoBTN{
+    border: none;
+    background-color: transparent;
+}
+
 .collected {
     display: flex;
     justify-content: center;

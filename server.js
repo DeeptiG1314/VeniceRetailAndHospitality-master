@@ -9,14 +9,22 @@ const express = require("express"),
   favicon = require("serve-favicon"),
   mongodb = require("mongodb"),
   {google} = require('googleapis'),
-  KEYFILEPATH = __dirname + '/googleKey.json',
+  KEYFILEPATH = __dirname + '/googleKey2.json',
   SCOPES = ['https://www.googleapis.com/auth/drive'],
   port = 3001;
 
 //MongoDB setup
-//const uri = "mongodb+srv://mapuser:mapuser@cluster0.0k894.mongodb.net/"
-const uri = "mongodb://localhost:27017/"
-const client = new mongodb.MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const uri = "mongodb+srv://mapuser:mapuser@cluster0.0k894.mongodb.net/"
+//const uri = "mongodb://localhost:27017/"
+
+const config = {
+  connectTimeoutMS: 360000,
+  socketTimeoutMS: 360000,
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}
+
+const client = new mongodb.MongoClient(uri, config);
 //const client = new mongodb.MongoClient("mongodb://localhost:27017/")
 let shopCollection = null
 let airbnbCollection = null
@@ -31,7 +39,10 @@ client.connect(err => {
 //Google Drive authentication
 const auth = new google.auth.GoogleAuth({
   keyfile: KEYFILEPATH,
-  scopes: SCOPES
+  scopes: SCOPES,
+  // clientOptions:{
+  //   subject: 'venice.wpi@gmail.com'
+  // }
 })
 process.env.GOOGLE_APPLICATION_CREDENTIALS = KEYFILEPATH
 
